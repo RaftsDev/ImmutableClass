@@ -10,33 +10,40 @@ public class Main {
 
     public static void main(String[] args) {
         // Create rooms
-        locations.put(0,new Location(0,"Central room"));
-        locations.put(1, new Location(1,"Northern room"));
-        locations.put(2,new Location(2,"Western room"));
-        locations.put(3,new Location(3,"Eastern room"));
-        locations.put(4,new Location(4,"Southern room"));
-
+        
         //Add exits to each room
-
+        
         //central room
-        locations.get(0).addExit("N",1);
-        locations.get(0).addExit("W",2);
-        locations.get(0).addExit("E",3);
-        locations.get(0).addExit("S",4);
+        Map<String, Integer> tempExits = new HashMap<String, Integer>();
+        tempExits.put("N",1);
+        tempExits.put("W",2);
+        tempExits.put("E",3);
+        tempExits.put("S",4);
+        locations.put(0,new Location(0,"Central room", tempExits));
 
         //Northern room
-        locations.get(1).addExit("W",2);
-        locations.get(1).addExit("S",0);
+        tempExits = new HashMap<String, Integer>();
+        tempExits.put("W",2);
+        tempExits.put("S",0);
+        locations.put(1, new Location(1,"Northern room", tempExits));
 
         //Western room
-        locations.get(2).addExit("E",0);
-        locations.get(2).addExit("N",1);
+        tempExits = new HashMap<String, Integer>();
+        tempExits.put("E",0);
+        tempExits.put("N",1);
+        locations.put(2,new Location(2,"Western room", tempExits));
 
         //Eastern room
-        locations.get(3).addExit("W",0);
+        tempExits = new HashMap<String, Integer>();
+        tempExits.put("W",0);
+        locations.put(3,new Location(3,"Eastern room", tempExits));
+
 
         //Southern room
-        locations.get(4).addExit("N",0);
+        tempExits = new HashMap<String, Integer>();
+        tempExits.put("N",0);
+        locations.put(4,new Location(4,"Southern room", tempExits));
+
 
         //Code of walking
 
