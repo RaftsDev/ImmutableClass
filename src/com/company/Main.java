@@ -54,7 +54,8 @@ public class Main {
         String direction;
         while(true){
             // check immutability
-           // System.out.println("put: "+ tempExits.put("N",2));
+           //s
+            // System.out.println("put: "+ tempExits.put("N",2));
 
             //print current location
             System.out.println("Your are in: "+locations.get(currentRoom).getDescription());
