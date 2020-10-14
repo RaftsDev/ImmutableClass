@@ -19,7 +19,7 @@ public class Main {
         tempExits.put("W",2);
         tempExits.put("E",3);
         tempExits.put("S",4);
-        locations.put(0,new Location(0,"Central room", null));
+        locations.put(0,new Location(0,"Central room", tempExits));
 
         //Northern room
         tempExits = new HashMap<String, Integer>();
